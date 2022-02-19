@@ -6,12 +6,12 @@ app = Flask(__name__)
 def hello():
     return "<p>Hello! Welcome to my web app</p>"
 
-@app.route("/form/")
+@app.route("/form")
 def form():
     return render_template('form.html')
 
 @app.route('/success', methods = ['POST', 'GET'])
 def success():
    if request.method == 'POST':
-      success = request.form
-      return render_template("success.html", success = success)
+      name = request.form.get('Name')
+      return render_template("success.html", name = name)
