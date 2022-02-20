@@ -1,11 +1,34 @@
-# Sky-App
+# Sky App
 
-Setup
+## Setup
 
+Creating the virtual environment:
+
+```
 python3 -m venv env
-creating the virtual environment
+```
 
+Activating the virtual environment:
+
+```
 source env/bin/activate
-activating the virtual environment
+```
 
+Installing the modules in the requirements file:
+
+```
 pip install -r requirements.txt
+```
+
+## Starting Server
+
+```
+export FLASK_APP=sky-app
+flask run
+```
+
+## Running Selenium Functional Test
+
+```
+python selenium-test.py
+```
